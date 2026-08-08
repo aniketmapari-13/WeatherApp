@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="page">
+
+    <!-- App card: search box , results -->
+    <section class="weather-card">
+
+      <header class="app-header">
+        <h1>Weather App</h1>
+        <p class="app-subtitle">Check current conditions for any city</p>
+      </header>
+
+      <!-- Search form -->
+      <form id="search-form" class="search-form">
+        <label for="city-input" class="visually-hidden">City name</label>
+        <input
+          type="text"
+          id="city-input"
+          class="city-input"
+          placeholder="Enter a city name..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="search-button">Search</button>
+      </form>
+
+      <!-- Status messages: loading spinner and error text -->
+      <p id="status-message" class="status-message" hidden></p>
+
+      <!-- Weather results, hidden until data is loaded -->
+      <div id="weather-result" class="weather-result" hidden>
+
+        <div class="result-top">
+          <div>
+            <h2 id="city-name" class="city-name"></h2>
+            <p id="condition-text" class="condition-text"></p>
+          </div>
+          <span id="weather-icon" class="weather-icon" aria-hidden="true"></span>
+        </div>
+
+        <p id="temperature" class="temperature"></p>
+
+        <div class="detail-grid">
+          <div class="detail-box">
+            <span class="detail-label">Humidity</span>
+            <span id="humidity" class="detail-value"></span>
+          </div>
+          <div class="detail-box">
+            <span class="detail-label">Wind Speed</span>
+            <span id="wind-speed" class="detail-value"></span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

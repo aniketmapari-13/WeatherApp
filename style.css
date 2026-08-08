@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  color: #1c2b3a;
+  background: linear-gradient(160deg, #1b3a6b, #4d95d6);
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+/* Card */
+.weather-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  padding: 28px 24px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  font-size: 1.6rem;
+}
+
+.app-subtitle {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #5c7085;
+}
+
+/* Search form */
+.search-form {
+  display: flex;
+  gap: 8px;
+}
+
+.city-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid #d7e2ee;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.city-input:focus {
+  outline: none;
+  border-color: #4d95d6;
+}
+
+.search-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #ff9d3d;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #e07f1e;
+}
+
+/* Status message */
+.status-message {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #5c7085;
+}
+
+.status-message.error {
+  color: #d64545;
+  font-weight: 600;
+}
+
+/* Weather result */
+.weather-result {
+  margin-top: 22px;
+}
+
+.result-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.city-name {
+  font-size: 1.2rem;
+}
+
+.condition-text {
+  color: #5c7085;
+  font-size: 0.9rem;
+}
+
+.weather-icon {
+  font-size: 2.5rem;
+}
+
+.temperature {
+  margin-top: 8px;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+/* Details grid */
+.detail-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.detail-box {
+  background: #f0f5fb;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #5c7085;
+  text-transform: uppercase;
+}
+
+.detail-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Hide label visually but keep it for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+  .search-form {
+    flex-direction: column;
+  }
+  .temperature {
+    font-size: 2.2rem;
+  }
+}
